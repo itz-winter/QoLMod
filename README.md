@@ -1,201 +1,97 @@
-# QoLModQoLMod — Quality-of-life features for Fabric
+# QoLMod: Quality-of-Life features
 
-===========================================
+QoLMod provides optional, configurable quality-of-life utilities to make singleplayer Minecraft more pleasant. Features are designed to be lightweight and toggleable.
 
-A Fabric quality-of-life mod covering both client-side utilities and server-side commands. Supports Minecraft 1.16.5 through 1.21.11.
+## What QoLMod has
 
-A compact, factual description of what this mod (the code in this repository) provides. The list below contains only features implemented in the source tree under `versions/*/src/main/java`.
+Features:
 
----
+- Fullbright - toggle darkness removal with a keybind; HUD shows status.
+- Tree Chopper - hold the keybind to fell whole trees quickly.
+- Trade Refresh - refresh villager trades in singleplayer worlds.
+- Accurate Block Placement - avoids accidental block rotations when placing against entities.
+- Recipe Viewer - view crafting recipe ingredients in chat (command available).
+- InvMove - move while GUI screens (inventory/menus) are open.
+- Hunger HUD - numeric hunger and saturation display on-screen.
+- Workbench - open a crafting table anywhere (singleplayer command).
+- Villager-in-a-bucket utilities (capture/release villagers; available 1.21.9+ where implemented).
 
-Features
+All of these can be toggled in the config or via ModMenu when installed.
 
-## Features--------
+## Quick install
 
+1. Download the JAR that matches your Minecraft version.
+2. Install Fabric Loader and Fabric API for that Minecraft version.
+3. Place the JAR into your `mods/` folder.
+4. (Optional) Install ModMenu to adjust settings in-game.
 
-
-### Client-sideServer-side
-
-| Feature | Description | Toggle |
-
-|---|---|---|- Homes
-
-| **Fullbright** | Removes darkness at night and underground | `G` keybind, or via config |  - Commands: `/home [name]`, `/sethome [name]`, `/delhome <name>`, `/homes`.
-
-| **Tree Chopper** | Fells entire trees with one swing while the keybind is held | Config |  - Stores per-player homes (name, position, rotation, dimension) and teleports players to them.
-
-| **Trade Refresh** | Restores merchant trades in singleplayer | Config |  - Enforces a configurable maximum homes-per-player.
-
-| **Accurate Block Placement** | Prevents unintended block rotations when placing against entities | Config |
-
-| **Recipe Viewer** | `/recipe <item>` shows crafting ingredients in chat | Config |- Ban/unban
-
-| **InvMove** | Allows movement while inventory GUIs are open | Config |  - Commands: `/ban <player> [duration] [reason]`, `/unban <player>`, `/pardon` (alias).
-
-| **Hunger Display HUD** | Renders numeric food level and saturation on-screen | Config |  - Supports permanent and temporary bans using the server ban list.
-
-
-
-### Server-sideClient-side
-
-| Feature | Commands | Notes |
-
-|---|---|---|- Keybound client utilities (registered in `QoLModClient`):
-
-| **Homes** | `/home [name]`, `/sethome [name]`, `/delhome <name>`, `/homes` | Per-player, multi-home, configurable limit |  - Fullbright toggle (keybind + HUD support).
-
-| **TPA** | `/tpa <player>`, `/tpaccept`, `/tpdeny` | Request-based teleport |  - Tree chopper keybind/handler.
-
-| **Back** | `/back` | Returns to last death or pre-teleport position |  - Trade refresh keybind/handler.
-
-| **Workbench** | `/workbench` | Opens a crafting table anywhere |  - Inventory movement while GUIs are open (InvMove) keybind/handler.
-
-| **PvP toggle** | `/pvp` | Per-player PvP opt-in/out |  - Accurate block placement helper.
-
-| **Ban / Unban** | `/ban <player> [duration] [reason]`, `/unban <player>` | Supports temporary bans (`10m`, `2h`, `7d`, etc.) |
-
-| **Vanish** | `/vanish` | Makes operators invisible to other players |- HUD
-
-| **Invsee** | `/invsee <player>` | View and edit another player's inventory |  - Hunger display renderer.
-
-
-
-### Entity Features (1.21.9+)Integrations & utilities
-
-| Feature | Description | Config |
-
-|---|---|---|- Integrations (server-side where implemented): placeholder / platform integrations are implemented on the server side in the codebase when present. This project ships server-side integration code per-version in `versions/*/src/main/java/dev/qolmod` when available.
-
-| **Villager in a Bucket** | Right-click a villager with an empty bucket to capture it; right-click a surface to release. Preserves profession, level, and trades. | `villagerBucketEnabled` |- Utility classes present: `DurationParser`, `FileManager`, `MessageFormatter`, `VersionHelper`, and other helpers used by the server- and client-side features.
-
-| **Zombie Villager in a Bucket** | Same as above for zombie villagers | `villagerBucketZombieEnabled` |
-
-| **Wandering Trader in a Bucket** | Same as above for wandering traders | `villagerBucketEnabled` |Project notes
-
--------------
-
-### Integrations
-
-- **Discord** — optional webhook integration for chat relay- Multi-version setup: each supported Minecraft version is a subproject under `versions/<mc-version>/`.
-
-- **LuckPerms** — prefix/suffix support in chat channels- Each subproject contains Fabric/Loom Gradle configuration and version-specific sources and resources.
-
-- **PlaceholderAPI** — custom placeholders via `/papi`- Some experimental/26.x subprojects exist but may require additional configuration (they use experimental Loom mappings in the tree).
-
-
-
----Want more detail?
-
-------------------
-
-## Requirements
-
-If you'd like a Modrinth-ready description trimmed to a specific length, or want example usages for each command, or the configuration options documented from `config.yml`, tell me which one and I will expand the README accordingly.
-
-- **Minecraft** — see the supported versions table below
-- **Fabric Loader** ≥ 0.15
-- **Fabric API** — bundled per-version
-- **ModMenu** *(optional)* — for the in-game config screen
-
----
-
-## Supported Versions
-
-| Minecraft | Status |
-|---|---|
-| 1.21.11 | ✅ Active |
-| 1.21.10 | ✅ Active |
-| 1.21.9 | ✅ Active |
-| 1.21.8 | ✅ Maintained |
-| 1.21.7 | ✅ Maintained |
-| 1.21.6 | ✅ Maintained |
-| 1.21.5 | ✅ Maintained |
-| 1.21.4 | ✅ Maintained |
-| 1.21.3 | ✅ Maintained |
-| 1.21.1 | ✅ Maintained |
-| 1.20.6 | ✅ Maintained |
-| 1.20.4 | ✅ Maintained |
-| 1.20.1 | ✅ Maintained |
-| 1.19.4 | ✅ Maintained |
-| 1.19.2 | ✅ Maintained |
-| 1.18.2 | ✅ Maintained |
-| 1.17.1 | ✅ Maintained |
-| 1.16.5 | ✅ Maintained |
-
----
-
-## Building
-
-**Requirements:** JDK 21+ (path set via `JAVA_HOME` or `gradle.properties`).
-
-### Windows
-```bat
-build.bat              :: build all versions
-build.bat 1.21.11      :: build one version
-```
-
-### Linux / macOS
-```bash
-chmod +x build.sh
-./build.sh             # build all versions
-./build.sh 1.21.11     # build one version
-./build.sh clean       # clean outputs
-```
-
-### Gradle directly
-```bash
-./gradlew :versions:1.21.11:build -x test
-./gradlew build -x test          # all versions
-```
-
-Output JARs land in `versions/<mc-version>/build/libs/`.
-
----
+This mod runs on Fabric client and works in singleplayer when Fabric is present.
 
 ## Configuration
 
-Open the in-game config screen via **ModMenu**, or edit `config/qolmod.json` manually.
+Config file: `config/qolmod.json` (created on first run). Example defaults:
 
-| Key | Default | Description |
-|---|---|---|
-| `fullbright.enabled` | `false` | Toggle fullbright |
-| `treeChopper.enabled` | `true` | Toggle tree chopper |
-| `tradeRefresh.enabled` | `true` | Toggle trade refresh |
-| `accurateBlockPlacement.enabled` | `true` | Toggle accurate block placement |
-| `recipeViewer.enabled` | `true` | Toggle recipe viewer |
-| `invMove.enabled` | `true` | Toggle inventory movement |
-| `hungerDisplay.enabled` | `true` | Toggle hunger HUD |
-| `villagerBucketEnabled` | `true` | Villager/trader bucketing *(1.21.9+)* |
-| `villagerBucketZombieEnabled` | `false` | Zombie villager bucketing *(1.21.9+)* |
-| `overrideOtherMods` | `false` | Override conflicting mods (restart required) |
-
----
-
-## Project Structure
-
-```
-QoLMod/
-├── common/                  # Shared sources (config, utilities)
-├── versions/
-│   ├── 1.21.11/             # Per-version Fabric subproject
-│   │   └── src/main/
-│   │       ├── java/dev/qolmod/
-│   │       │   ├── mixin/       # Version-specific mixins
-│   │       │   ├── item/        # Custom items (VillagerBucketItem, etc.)
-│   │       │   └── client/      # Client code & ModMenu screen
-│   │       └── resources/
-│   │           └── assets/qolmod/
-│   │               ├── models/item/
-│   │               └── textures/item/
-│   └── ...
-├── build.bat                # Windows build helper
-├── build.sh                 # Linux/macOS build helper
-├── build.gradle.kts
-└── settings.gradle.kts
+```json
+{
+  "fullbright.enabled": false,
+  "treeChopper.enabled": true,
+  "tradeRefresh.enabled": true,
+  "accurateBlockPlacement.enabled": true,
+  "recipeViewer.enabled": true,
+  "invMove.enabled": true,
+  "hungerDisplay.enabled": true,
+  "villagerBucketEnabled": true,
+  "villagerBucketZombieEnabled": false,
+  "overrideOtherMods": false
+}
 ```
 
----
+If you have ModMenu installed, use the in-game config screen to toggle features without editing files.
+
+## Commands & Keybinds
+
+Singleplayer commands (available when running Fabric client):
+
+- `/workbench` - open a crafting table interface anywhere.
+- `/recipe <item>` - show a crafting recipe in chat (when available).
+
+Client keybinds (defaults may vary by version):
+
+- Fullbright toggle - toggles fullbright on/off.
+- Tree Chopper hold - hold while swinging to fell trees.
+
+Most client features also have optional HUD elements and can be toggled independently.
+
+## Supported Minecraft versions
+
+Stable singleplayer support is provided for multiple Minecraft versions on Fabric (notably 1.16.5 through 1.21.11). Always choose the JAR that matches your Minecraft client version.
+
+| Version | Supported? |
+|---------|------------|
+| 1.16.5  | Yes        |
+| 1.17.x  | Yes        |
+| 1.18.x  | Yes        |
+| 1.19.x  | Yes        |
+| 1.20.x  | Yes        |
+| 1.21.x  | Yes        |
+| 26.1.x  | Not Yet    |
+
+Native version(s): 1.21.4-11.
+
+## Troubleshooting
+
+- If a client-side feature conflicts with another mod, try toggling `overrideOtherMods` in `config/qolmod.json` and restart Minecraft.
+- Confirm Fabric Loader and Fabric API versions match your Minecraft client.
+- Review `logs/latest.log` for error messages and include relevant snippets when reporting issues.
+
+## Privacy
+
+QoLMod does not collect telemetry. Optional integrations (e.g., Discord webhooks) are disabled by default and documented in config if present.
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT - see the `LICENSE` file in this repository.
+
+---
+
+Want a shorter blurb for Modrinth's description field or a trimmed feature list for the mod page? Tell me the desired length (e.g., 200 or 400 characters) and I will produce it.
