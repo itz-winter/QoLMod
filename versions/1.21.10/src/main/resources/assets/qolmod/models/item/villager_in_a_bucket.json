@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "qolmod:item/villager_in_a_bucket"
+  }
+}

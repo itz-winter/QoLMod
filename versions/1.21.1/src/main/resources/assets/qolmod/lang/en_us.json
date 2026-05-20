@@ -1,0 +1,21 @@
+{
+  "key.qolmod.fullbright": "Toggle Fullbright",
+  "key.qolmod.treechopper": "Toggle Tree Chopper",
+  "key.qolmod.traderefresh": "Cycle Villager Trades",
+  "key.qolmod.invmove": "Toggle InvMove",
+  "key.categories.qolmod": "QoL Mod",
+  "text.qolmod.fullbright.on": "Fullbright ON",
+  "text.qolmod.fullbright.off": "Fullbright OFF",
+  "text.qolmod.treechopper.on": "Tree Chopper ON",
+  "text.qolmod.treechopper.off": "Tree Chopper OFF",
+  "text.qolmod.invmove.on": "InvMove ON",
+  "text.qolmod.invmove.off": "InvMove OFF",
+  "text.qolmod.traderefresh.hint": "Press %s to cycle trades",
+  "text.qolmod.hunger.saturation": "Saturation: %.1f",
+  "text.qolmod.hunger.exhaustion": "Exhaustion: %.2f",
+  "text.qolmod.config.title": "QoL Mod Settings",
+  "text.qolmod.config.general": "General",
+  "text.qolmod.config.features": "Features",
+  "text.qolmod.config.commands": "Commands",
+  "modmenu.descriptionTranslation.qolmod": "A quality-of-life mod featuring Fullbright, Tree Chopper, Villager Trade Refresh, Hunger Display, Accurate Block Placement, Recipe Viewer, InvMove, and useful server commands."
+}

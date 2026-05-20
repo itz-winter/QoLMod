@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "qolmod",
+  "version": "${version}",
+  "name": "QoL Mod",
+  "description": "Quality of Life mod for Minecraft",
+  "authors": ["QoLMod Team"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/qolmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.qolmod.QoLMod"],
+    "client": ["dev.qolmod.client.QoLModClient"],
+    "modmenu": ["dev.qolmod.client.modmenu.QoLModMenuIntegration"]
+  },
+  "mixins": [
+    "qolmod.mixins.json",
+    "qolmod.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.16.5",
+    "java": ">=16",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

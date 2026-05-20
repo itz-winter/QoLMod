@@ -1,0 +1,27 @@
+{
+  "key.qolmod.fullbright": "Toggle Fullbright",
+  "key.qolmod.treechopper": "Toggle Tree Chopper",
+  "key.qolmod.traderefresh": "Cycle Villager Trades",
+  "key.categories.qolmod": "QoL Mod",
+
+  "gamerule.qolmod.tp_countdown": "Teleport Countdown (seconds)",
+  "gamerule.qolmod.tp_countdown.description": "How many seconds players must stand still before a teleport fires. 0 = instant.",
+  "gamerule.qolmod.homes_max": "Max Homes Per Player",
+  "gamerule.qolmod.homes_max.description": "Maximum number of homes a non-operator player can set.",
+  "gamerule.qolmod.silk_touch_spawners": "Silk Touch Spawners",
+  "gamerule.qolmod.silk_touch_spawners.description": "Whether spawners can be picked up with a Silk Touch tool, preserving their mob type.",
+  "gamerule.qolmod.spawn_immunity_ticks": "Spawn Immunity Ticks",
+  "gamerule.qolmod.spawn_immunity_ticks.description": "How many ticks of damage immunity players receive when they spawn or respawn. 20 ticks = 1 second. Set to 0 to disable.",
+  "gamerule.qolmod.silk_touch_budding_amethyst": "Silk Touch Budding Amethyst",
+  "gamerule.qolmod.silk_touch_budding_amethyst.description": "Whether budding amethyst can be picked up with a Silk Touch tool.",
+  "gamerule.qolmod.silk_touch_reinforced_deepslate": "Silk Touch Reinforced Deepslate",
+  "gamerule.qolmod.silk_touch_reinforced_deepslate.description": "Whether reinforced deepslate can be picked up with a Silk Touch tool.",
+  "gamerule.qolmod.silk_touch_suspicious_sand": "Silk Touch Suspicious Sand",
+  "gamerule.qolmod.silk_touch_suspicious_sand.description": "Whether suspicious sand can be picked up (empty) with a Silk Touch tool.",
+  "gamerule.qolmod.silk_touch_suspicious_gravel": "Silk Touch Suspicious Gravel",
+  "gamerule.qolmod.silk_touch_suspicious_gravel.description": "Whether suspicious gravel can be picked up (empty) with a Silk Touch tool.",
+
+  "item.qolmod.villager_in_a_bucket": "Villager in a Bucket",
+  "item.qolmod.wandering_trader_in_a_bucket": "Wandering Trader in a Bucket",
+  "item.qolmod.zombie_villager_in_a_bucket": "Zombie Villager in a Bucket"
+}

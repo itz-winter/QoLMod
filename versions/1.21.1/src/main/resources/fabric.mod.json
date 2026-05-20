@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "qolmod",
+  "version": "${version}",
+  "name": "QoLMod",
+  "description": "All-in-one Quality of Life mod: Fullbright, Tree Chopper, Trade Cycling, Hunger Display, Accurate Placement, InvMove, Recipe Viewer, Commands, and more.",
+  "authors": ["QoLMod Team"],
+  "contact": {
+    "homepage": "https://github.com/qolmod/QoLMod",
+    "sources": "https://github.com/qolmod/QoLMod"
+  },
+  "license": "MIT",
+  "icon": "assets/qolmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.qolmod.QoLMod"],
+    "client": ["dev.qolmod.client.QoLModClient"],
+    "modmenu": ["dev.qolmod.client.modmenu.QoLModMenuIntegration"]
+  },
+  "mixins": [
+    "qolmod.mixins.json",
+    {
+      "config": "qolmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

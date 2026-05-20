@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "dev.qolmod.mixin.client",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "GameOptionsMixin",
+    "InGameHudMixin",
+    "ClientPlayerMixin",
+    "MerchantScreenMixin",
+    "KeyboardInputMixin",
+    "MinecraftClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

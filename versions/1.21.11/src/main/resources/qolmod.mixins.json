@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "dev.qolmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TreeBlockBreakMixin",
+    "LeavesTickMixin",
+    "SpawnerSilkTouchMixin",
+    "SilkTouchSpecialBlocksMixin",
+    "EnchantCompatMixin",
+    "SpawnImmunityMixin",
+    "VillagerMixin",
+    "WanderingTraderMixin",
+    "ZombieVillagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

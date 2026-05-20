@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.qolmod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TreeBlockBreakMixin",
+    "LeavesTickMixin",
+    "VillagerMixin",
+    "WanderingTraderMixin",
+    "ZombieVillagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

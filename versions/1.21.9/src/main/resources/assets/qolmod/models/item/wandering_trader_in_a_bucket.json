@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "qolmod:item/wandering_trader_in_a_bucket"
+  }
+}
