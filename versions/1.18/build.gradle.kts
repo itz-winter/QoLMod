@@ -2,14 +2,14 @@ plugins {
     id("fabric-loom") version "1.16.1"
 }
 
-val minecraftVersion = "1.20.3"
-val yarnMappings = "1.20.3+build.1"
+val minecraftVersion = "1.18"
+val yarnMappings = "1.18+build.1"
 val loaderVersion = "0.16.9"
-val fabricApiVersion = "0.91.1+1.20.3"
-val modMenuVersion = "9.2.0-beta.2"
+val fabricApiVersion = "0.46.6+1.18"
+val modMenuVersion = "3.0.0"
 
 base {
-    archivesName.set("qolmod-1.20.3")
+    archivesName.set("qolmod-1.18")
 }
 
 dependencies {
